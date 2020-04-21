@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='posts',
             name='content',
-            field=models.CharField(blank=True, null=True),
+            field=models.CharField(blank=True, max_length=10, null=True),
         ),
         migrations.AlterField(
             model_name='posts',
