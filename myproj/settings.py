@@ -25,7 +25,7 @@ SECRET_KEY = '5kl#4k^2aae*y%!j@apf$19wcc8_^mf_=jf60imb6ji!+rqg47'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["aws-1.herokuapp.com"]
+ALLOWED_HOSTS = ["aws-aws.herokuapp.com"]
 EMAIL_HOST ='smtp.gmail.com'
 EMAIL_HOST_USER ='moha90he@gmail.com'
 EMAIL_HOST_PASSWORD ='moha90hA'
