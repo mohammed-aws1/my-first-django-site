@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load static %}
+      {% block C_head %}
+    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url( {% static 'images/hero_bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7 text-center" data-aos="fade-up">
+            <h1>حياته</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+      {% endblock %}
+  
+    {% block nav %}
+    <div class="site-section" data-aos="fade">
+      <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-6  mb-5">
+              <img src="{% static 'images/about.jpg' %}" alt="Images" class="img-fluid">
+            </div>
+            <div class="col-md-5 ml-auto">
+              <h3 class="text-black mb-3" style="font-family: 'Amiri', serif;">أوس الخفاجي</h3>
+                {% for post in about %}
+              <p style="font-family: 'Amiri', serif;font-size:20px;text-align:right"> {{ post.content|safe }} </p>
+                {% endfor %}
+              <p class="mt-5 mb-3" style="font-family:'cairo', serif">للمزيد :</p>
+              <p>
+                <a href=https://ar.wikipedia.org/wiki/أوس_الخفاجي" target="_blank" class="pr-2 offset-1"><i class="fab fa-wikipedia-w" style="color:#11f"></i></a>
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+  {% endblock %}

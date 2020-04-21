@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up </title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %} ">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/style2.css' %} ">
+    <link href="https://fonts.googleapis.com/css2?family=Changa&family=Markazi+Text:wght@500&family=Tajawal:wght@500&display=swap" rel="stylesheet">
+<style>
+    input{transition:all .5s}
+    .errorlist{list-style:none}
+</style>
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+
+        <section class="signup" style="font-family: 'Tajawal', sans-serif;">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">قم بالتسجيل</h2>
+                        <form method="POST" class="register-form" id="register-form">{% csrf_token %}
+                            <div class="form-group first">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                {{ form.username }}
+
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                {{ form.email }}
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                {{ form.password }}
+
+                            </div>
+
+                        <div style="color:red">
+                            {{ form.username.errors }}
+                            {{ form.email.errors }}
+                            {{ form.password.errors }}
+                        </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" style="font-size:18px;background:#7971EA" value="سجـل"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="{% static 'images/signup-image.jpg' %} " alt="sing up image"></figure>
+                        <div class="signup-image-link" style="font-size:17px">
+                            <a href="{% url 'login' %}"  style="color:black;text-decoration:none">لديك حساب ؟<span style="color:#7971EA"> اضغط هنا </span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</div>
+<script src="{% static 'vendor/jquery2/jquery.min.js' %}"></script>
+    <script src="{% static 'js/main2.js' %}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

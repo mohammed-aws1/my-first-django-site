@@ -1,0 +1,44 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 07/12/2018 03:18
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.44afa573324e.eot");
+  src: url("./Flaticon.44afa573324e.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.c7208f1d90a2.woff") format("woff"),
+       url("./Flaticon.73610fb0259e.ttf") format("truetype"),
+       url("./Flaticon.6efe78a44d7d.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.6efe78a44d7d.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-camera:before { content: "\f100"; }
+.flaticon-picture:before { content: "\f101"; }
+.flaticon-sheep:before { content: "\f102"; }
+.flaticon-frame:before { content: "\f103"; }
+.flaticon-eiffel-tower:before { content: "\f104"; }
+.flaticon-video-play:before { content: "\f105"; }

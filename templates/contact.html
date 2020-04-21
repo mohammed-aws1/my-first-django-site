@@ -1,0 +1,110 @@
+{% extends 'index.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block nav_style %}
+<style>
+  .site-navbar .site-navigation .site-menu .Contact{
+    color: #7971ea
+  }
+  .site-navbar .site-navigation .site-menu .active > a {
+    color: #000;
+
+}
+</style>
+{% endblock %}
+
+{% block C_head %}
+    <div class="site-blocks-cover overlay inner-page-cover" style="background: #7C00FF ;" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7 text-center" data-aos="fade-up">
+            <h1> التواصل </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+  {% block nav %}
+  {% if request.user.is_authenticated %}
+  <style>
+    label,h1{font-family: 'Almarai', sans-serif;}
+  </style>
+  <div class="site-section" data-aos="fade">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+
+
+          <div class="row">
+            <div class="col-lg-8 mb-5">
+              <form method="POST" action="">{% csrf_token %}
+
+                <div class="row form-group">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label class="text-black" for="fname"> الأسم </label>
+                    {{ form.first_name }}
+                  </div>
+                  <div class="col-md-6">
+                    <label class="text-black" for="lname">اللقب</label>
+                    {{ form.last_name }}
+                  </div>
+                </div>
+
+                <div class="row form-group">
+
+                  <div class="col-md-12">
+                    <label class="text-black" for="email">بريدك الالكتروني</label>
+                    {{ form.email }}
+                  </div>
+                </div>
+
+                <div class="row form-group">
+
+                  <div class="col-md-12">
+                    <label class="text-black" for="subject">عنوان الرسالة</label>
+                    {{ form.subject }}
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <label class="text-black" for="message">الرسالة</label>
+                    {{ form.message }}
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <input type="submit" value="أرسل البريد" class="btn btn-primary py-2 px-4 text-white">
+                  </div>
+                </div>
+
+
+              </form>
+            </div>
+            <div class="col-lg-3 ml-auto">
+              <div class="mb-3 bg-white">
+                <p class="mb-0 font-weight-bold">ملاحظة</p>
+                <p class="mb-4 font-weight-normal"> اكتب ما تود ارساله الينا في الحقول المجاورة</p>
+
+                <p class="mb-0 font-weight-bold"> بريدي الالكتروني </p>
+                <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  {% endif %}
+  {% endblock %}

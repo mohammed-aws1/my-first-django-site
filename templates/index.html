@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Aws al_khafajy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include 'parts/links.html' %}
+    {% block nav_style %} {% endblock %}
+  </head>
+  <body>
+  <a name="top"></a>
+  <div class="site-wrap">
+
+    
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <header class="site-navbar py-3" role="banner">
+
+
+      {% for message in messages %}
+        <div class="messages element-animation">
+            {{ message }}
+        </div>
+      {% endfor %}
+
+    {% include 'parts/nav.html' %}
+
+    </header>
+<!--                                                                    THE SECOND HEADER                             -->
+
+    {% block C_head %}
+      {% endblock %}
+
+    {% block nav %}
+    {% include 'parts/2nd_header.html' %}
+
+                                       <!--                              THE CONTENT                                  -->
+    {% include 'parts/content.html' %}
+    <br/>
+    <hr/>
+   <div class="py-3 mb-5 mt-5">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12 d-md-flex align-items-center" data-aos="fade">
+           <h2 class="text-black mb-5 mb-md-0 text-center text-md-left">لديك استفسار ؟</h2>
+           <div class="ml-auto text-center text-md-left">
+            <a href="{% url 'TheContact' %}" class="btn btn-danger py-3 px-5 rounded">تواصل معنا</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+{% endblock %}
+
+  
+
+  <footer class="site-footer">
+      <div class="container">
+        <div class="row" style="justify-content:center">
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="row mb-5">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">القائمة</h3>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="{% url 'home' %}">الصفحة الرئيسية</a></li>
+                  <li><a href="#">نبذة</a></li>
+                  <li><a href="{% url 'TheContact' %}">التواصل</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h3 class="footer-heading mb-4">الصفحات</h3>
+
+                <div>
+                  <a href="https://www.facebook.com/ya.abas.777" target="_blank" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/AwsKhfaji" target="_blank" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                </div>
+
+            
+
+          </div>
+          
+        </div>
+
+      </div>
+    </footer>
+
+
+    
+    
+  </div>
+  <a href="#top" class="forward btn btn-primary"><i class="fas fa-arrow-up" style="color:white"></i></a>
+  {% include 'parts/js.html' %}
+  </body>
+</html>
