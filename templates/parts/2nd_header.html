@@ -1,0 +1,28 @@
+{% load static%}
+
+<style class="">
+  style + div{
+    background:url(" {% static 'images/aws_cover.jpg' %} ");
+  }
+  @media (max-width: 500px) {
+    style + div{
+    background:url(" {% static 'images/iphone_cover.jpg' %} ");
+  }
+  }
+  .cover{font-family: 'Cairo', sans-serif;}
+  .dcover{padding:0}
+
+</style>
+<div class="site-blocks-cover overlay inner-page-cover" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7 text-center dcover" data-aos="fade-up">
+            <h1 class="cover" > الشيخ أوس الخفاجي الصفحة الرسمية </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-block-profile-pic" data-aos="fade" data-aos-delay="200">
+      <img src="{% static 'images/aws.jpg' %}" alt="Image">
+    </div>
